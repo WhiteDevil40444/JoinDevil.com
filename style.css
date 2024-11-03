@@ -1,0 +1,104 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0d1b2a; /* Dark background */
+    color: #e0e1dd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Center content and style header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #e0e1dd;
+    font-weight: 600;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Contact links styling */
+.contact-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Discord styling */
+.discord-link {
+    background-color: #7289da; /* Discord blue */
+    box-shadow: 0 4px 15px rgba(114, 137, 218, 0.4);
+}
+
+/* WhatsApp styling */
+.whatsapp-link {
+    background-color: #25d366; /* WhatsApp green */
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
+/* Hover and focus animations */
+.contact-link:hover, .contact-link:focus {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-link i {
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
+}
+
+.contact-link:hover i, .contact-link:focus i {
+    transform: rotate(15deg); /* Rotate icon slightly on hover */
+}
+
+/* Optional styling for text */
+section p {
+    font-size: 1.1em;
+    color: #c5c6c7;
+    margin-bottom: 20px;
+    max-width: 400px;
+    line-height: 1.6;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .contact-link {
+        width: 200px;
+        font-size: 1em;
+        padding: 12px 20px;
+    }
+}

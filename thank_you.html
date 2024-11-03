@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Thank You for Contacting Us!</h1>
+    </header>
+
+    <section>
+        <p id="thankYouMessage">We will get back to you soon.</p>
+    </section>
+
+    <script>
+        // Retrieve values from session storage
+        const userName = sessionStorage.getItem('userName');
+        const userEmail = sessionStorage.getItem('userEmail');
+
+        // Display the thank you message with user details
+        if (userName && userEmail) {
+            document.getElementById('thankYouMessage').innerHTML = 
+                `Thank you, ${userName}! We have received your message and will respond to ${userEmail} soon.`;
+        }
+    </script>
+</body>
+</html>
